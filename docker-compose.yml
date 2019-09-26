@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  cockpit-cms:
+    build: ./cockpit
+    ports:
+      - 8080:80
+    volumes:
+      - ./storage:/var/www/html/storage
+    depends_on:
+      - cockpit-cms-database
+    environment:
+      COCKPIT_DATABASE_SERVER: 'mongodb://cockpit-cms-database:27017'
+      COCKPIT_DATABASE_NAME: cockpitdb
+  cockpit-cms-database:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: cockpitdb
+      MONGO_INITDB_ROOT_USERNAME: change
+      MONGO_INITDB_ROOT_PASSWORD: change
