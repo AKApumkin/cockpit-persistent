@@ -1,5 +1,6 @@
-# Cockpit docker-compose
+# Cockpit docker-compose on php 7.3.2-apache
 This repo contains the docker-compose build of Cockpit with persistent data from the storage folder that will be mapped locally. 
+
 
 This image also has 2 addons from the community:
 1. https://github.com/agentejo/CloudStorage -> This addon provides access to AWS, Azure or Google Cloud storage for assets. The config files are located on the git repo. To add them first log into the cockpit control panel after installation, then go to the settings and add the necessary lines to the config.yaml file.
