@@ -1,4 +1,4 @@
-# Cockpit docker-compose on php 7.3.2-apache
+# Cockpit docker-compose on php 7.2.24-apache
 This repo contains the docker-compose build of Cockpit with persistent data from the storage folder that will be mapped locally. 
 
 
@@ -7,12 +7,15 @@ This image also has 2 addons from the community:
 
 2. https://github.com/pauloamgomes/CockpitCMS-Moderation -> This adds draft mode to your collections, watch the video at the bottom of the repo for a full explanation. no need for any configuration. 
 
+## Customize confiugrations 
+inside the file config/config.yaml add additional langauges and connect S3 or remove if not using it. 
 
 ## Start
 `docker-compose up -d` 
 
 ## Run the installation for Cockpit 
 http://localhost:8080/install 
+
 
 ## Enjoy 
 As a note the storage folder holds the object information that is also required during a migration. 
