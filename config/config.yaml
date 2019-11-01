@@ -1,0 +1,9 @@
+languages:
+    default: English
+cloudstorage:
+    assets:
+        type: s3
+        key: **Your Key**
+        secret:  **Your Secret**
+        region: **AWS-region**
+        bucket: **AWS S3 Bucket Name**
